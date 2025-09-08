@@ -27,8 +27,8 @@ def analyze_chord_frequencies(y, sr):
         prominent_indices = np.where(
             (normalized_magnitudes > MAGNITUDE_THRESHOLD) & (freq_bins < max_freq_limit))
         
-        prominent_frequencies = freq_bins[prominent_indices]
-        prominent_magnitudes = normalized_magnitudes[prominent_indices]
+        prominent_frequencies = freq_bins[prominent_indices[0]]
+        prominent_magnitudes = normalized_magnitudes[prominent_indices[0]]
 
         prominent_data = []
         for i in range(len(prominent_frequencies)):
