@@ -1,0 +1,320 @@
+{
+    "a-major": [
+        {
+            "frequency": 172.265625,
+            "magnitude": 0.5558609962463379
+        },
+        {
+            "frequency": 258.3984375,
+            "magnitude": 0.584136962890625
+        },
+        {
+            "frequency": 279.931640625,
+            "magnitude": 1.0
+        }
+    ],
+    "a-minor": [
+        {
+            "frequency": 150.732421875,
+            "magnitude": 0.6761765480041504
+        },
+        {
+            "frequency": 172.265625,
+            "magnitude": 0.8543945550918579
+        },
+        {
+            "frequency": 215.33203125,
+            "magnitude": 0.9082210063934326
+        },
+        {
+            "frequency": 236.865234375,
+            "magnitude": 0.7423975467681885
+        },
+        {
+            "frequency": 258.3984375,
+            "magnitude": 1.0
+        },
+        {
+            "frequency": 279.931640625,
+            "magnitude": 0.6852332353591919
+        },
+        {
+            "frequency": 322.998046875,
+            "magnitude": 0.7361002564430237
+        },
+        {
+            "frequency": 344.53125,
+            "magnitude": 0.6461130976676941
+        },
+        {
+            "frequency": 430.6640625,
+            "magnitude": 0.953827977180481
+        },
+        {
+            "frequency": 452.197265625,
+            "magnitude": 0.8561753630638123
+        },
+        {
+            "frequency": 516.796875,
+            "magnitude": 0.5497015714645386
+        }
+    ],
+    "b-major": [
+        {
+            "frequency": 107.666015625,
+            "magnitude": 0.5903080701828003
+        },
+        {
+            "frequency": 129.19921875,
+            "magnitude": 0.8983268141746521
+        },
+        {
+            "frequency": 236.865234375,
+            "magnitude": 0.7733699083328247
+        },
+        {
+            "frequency": 258.3984375,
+            "magnitude": 0.9373936653137207
+        },
+        {
+            "frequency": 301.46484375,
+            "magnitude": 0.6107949018478394
+        },
+        {
+            "frequency": 322.998046875,
+            "magnitude": 1.0
+        },
+        {
+            "frequency": 753.662109375,
+            "magnitude": 0.5449807643890381
+        }
+    ],
+    "b-minor": [
+        {
+            "frequency": 172.265625,
+            "magnitude": 0.5692184567451477
+        },
+        {
+            "frequency": 193.798828125,
+            "magnitude": 0.7029497027397156
+        },
+        {
+            "frequency": 279.931640625,
+            "magnitude": 0.7112157344818115
+        },
+        {
+            "frequency": 301.46484375,
+            "magnitude": 1.0
+        },
+        {
+            "frequency": 366.064453125,
+            "magnitude": 0.6287974119186401
+        },
+        {
+            "frequency": 387.59765625,
+            "magnitude": 0.508720338344574
+        }
+    ],
+    "c-major": [
+        {
+            "frequency": 129.19921875,
+            "magnitude": 0.5385722517967224
+        },
+        {
+            "frequency": 150.732421875,
+            "magnitude": 0.6481158137321472
+        },
+        {
+            "frequency": 172.265625,
+            "magnitude": 0.8374853730201721
+        },
+        {
+            "frequency": 193.798828125,
+            "magnitude": 0.9899036288261414
+        },
+        {
+            "frequency": 215.33203125,
+            "magnitude": 0.554201602935791
+        },
+        {
+            "frequency": 258.3984375,
+            "magnitude": 1.0
+        },
+        {
+            "frequency": 279.931640625,
+            "magnitude": 0.7365667819976807
+        }
+    ],
+    "c-minor": [
+        {
+            "frequency": 129.19921875,
+            "magnitude": 0.5939980149269104
+        },
+        {
+            "frequency": 258.3984375,
+            "magnitude": 1.0
+        },
+        {
+            "frequency": 279.931640625,
+            "magnitude": 0.7314326763153076
+        },
+        {
+            "frequency": 301.46484375,
+            "magnitude": 0.6724367737770081
+        },
+        {
+            "frequency": 322.998046875,
+            "magnitude": 0.8899920582771301
+        }
+    ],
+    "d-major": [
+        {
+            "frequency": 279.931640625,
+            "magnitude": 0.7182229161262512
+        },
+        {
+            "frequency": 301.46484375,
+            "magnitude": 1.0
+        }
+    ],
+    "d-minor": [
+        {
+            "frequency": 279.931640625,
+            "magnitude": 0.6300114989280701
+        },
+        {
+            "frequency": 301.46484375,
+            "magnitude": 1.0
+        }
+    ],
+    "e-major": [
+        {
+            "frequency": 150.732421875,
+            "magnitude": 0.8012707233428955
+        },
+        {
+            "frequency": 172.265625,
+            "magnitude": 0.9713314175605774
+        },
+        {
+            "frequency": 215.33203125,
+            "magnitude": 0.5172174572944641
+        },
+        {
+            "frequency": 236.865234375,
+            "magnitude": 1.0
+        },
+        {
+            "frequency": 258.3984375,
+            "magnitude": 0.9906681776046753
+        },
+        {
+            "frequency": 322.998046875,
+            "magnitude": 0.5360450744628906
+        }
+    ],
+    "e-minor": [
+        {
+            "frequency": 150.732421875,
+            "magnitude": 0.7988863587379456
+        },
+        {
+            "frequency": 172.265625,
+            "magnitude": 1.0
+        },
+        {
+            "frequency": 193.798828125,
+            "magnitude": 0.7782767415046692
+        },
+        {
+            "frequency": 236.865234375,
+            "magnitude": 0.8209173083305359
+        },
+        {
+            "frequency": 258.3984375,
+            "magnitude": 0.7933336496353149
+        }
+    ],
+    "f-major": [
+        {
+            "frequency": 129.19921875,
+            "magnitude": 0.5448517203330994
+        },
+        {
+            "frequency": 172.265625,
+            "magnitude": 0.6930083632469177
+        },
+        {
+            "frequency": 193.798828125,
+            "magnitude": 0.507152795791626
+        },
+        {
+            "frequency": 215.33203125,
+            "magnitude": 0.5448469519615173
+        },
+        {
+            "frequency": 236.865234375,
+            "magnitude": 0.5307655334472656
+        },
+        {
+            "frequency": 258.3984375,
+            "magnitude": 1.0
+        },
+        {
+            "frequency": 279.931640625,
+            "magnitude": 0.8237742781639099
+        },
+        {
+            "frequency": 430.6640625,
+            "magnitude": 0.5347987413406372
+        },
+        {
+            "frequency": 452.197265625,
+            "magnitude": 0.5740213394165039
+        }
+    ],
+    "f-minor": [
+        {
+            "frequency": 129.19921875,
+            "magnitude": 0.6179535388946533
+        },
+        {
+            "frequency": 150.732421875,
+            "magnitude": 0.5227564573287964
+        },
+        {
+            "frequency": 172.265625,
+            "magnitude": 1.0
+        },
+        {
+            "frequency": 193.798828125,
+            "magnitude": 0.7739983201026917
+        },
+        {
+            "frequency": 258.3984375,
+            "magnitude": 0.948017954826355
+        },
+        {
+            "frequency": 279.931640625,
+            "magnitude": 0.8870184421539307
+        }
+    ],
+    "g-major": [
+        {
+            "frequency": 193.798828125,
+            "magnitude": 1.0
+        },
+        {
+            "frequency": 215.33203125,
+            "magnitude": 0.5964318513870239
+        },
+        {
+            "frequency": 279.931640625,
+            "magnitude": 0.6965907216072083
+        },
+        {
+            "frequency": 301.46484375,
+            "magnitude": 0.9945603609085083
+        }
+    ]
+}
