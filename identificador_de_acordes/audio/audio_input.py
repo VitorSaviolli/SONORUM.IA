@@ -18,7 +18,10 @@ def audio_stream_generator():
 
             #calcula a intensidade do volume por RMS
             volume = np.sqrt(np.mean(y**2))
-            
+
+            #LINHA DE TESTE
+            #print(f"Volume do chunk: {np.sqrt(np.mean(y**2)):.2f}")
+
             if volume > VOLUME_THRESHOLD:
                 yield y, RATE
 
@@ -36,3 +39,5 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print("\nTeste finalizado.")
         sys.exit(0)
+
+    

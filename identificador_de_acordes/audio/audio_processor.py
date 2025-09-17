@@ -3,43 +3,24 @@ import librosa
 import numpy as np
 
 # Define o limiar de magnitude para filtrar frequências irrelevantes
-MAGNITUDE_THRESHOLD = 0.5
+MAGNITUDE_THRESHOLD = 0.1
 # Filtra as frequências altas que são provavelmente harmônicos (acima de 800 Hz)
 max_freq_limit = 800
 
-def analyze_chord_frequencies(y, sr):
-    """
-    Realiza a Transformada de Fourier
-    e retorna as frequências mais proeminentes.
-    """
+def extract_chroma(y, sr):
     try:
-        stft_output = librosa.stft(y)
-        magnitudes = np.abs(stft_output)
-        freq_bins = librosa.fft_frequencies(sr=sr)
-        mean_magnitudes = np.mean(magnitudes, axis=1)
-
-        max_magnitude = np.max(mean_magnitudes)
-        if max_magnitude > 0:
-            normalized_magnitudes = mean_magnitudes / max_magnitude
-        else:
-            normalized_magnitudes = mean_magnitudes
-
-        prominent_indices = np.where(
-            (normalized_magnitudes > MAGNITUDE_THRESHOLD) & (freq_bins < max_freq_limit))
+        """Extrai e normaliza o cromagrama médio de um sinal de áudio."""
+        # Extrai o cromagrama (12 classes de notas)
+        chroma = librosa.feature.chroma_stft(y=y, sr=sr)
+        chroma_mean = np.mean(chroma, axis=1)
+        norm = np.linalg.norm(chroma_mean)
         
-        prominent_frequencies = freq_bins[prominent_indices[0]]
-        prominent_magnitudes = normalized_magnitudes[prominent_indices[0]]
-
-        prominent_data = []
-        for i in range(len(prominent_frequencies)):
-            prominent_data.append({
-                'frequency': prominent_frequencies[i],
-                'magnitude': prominent_magnitudes[i]
-            })
-
-        prominent_data.sort(key=lambda item: item['frequency'])
-
-        return prominent_data
+        if norm > 0:
+            chroma_norm = chroma_mean / norm
+        else:
+            chroma_norm = chroma_mean  
+            
+        return chroma_norm.tolist()
 
     except Exception as e:
         print(f"Erro no processamento de audio: {e}")
