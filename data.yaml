@@ -1,9 +1,0 @@
-path: C:\Users\Pedro\Documents\Estudos\IF 4°\PICO\SONORUM-YOLO\yolo_guitar\datasets
-train: images\train
-val: images\val
-
-kpt_shape: [12, 3]
-flip_index: [E-cmç,E-final,A-cmç,A-final,D-cmç,D-final,G-cmç,G-final,B-cmç,B-final,e-cmç,e-final]
-
-names:
-  0: guitar_neck
