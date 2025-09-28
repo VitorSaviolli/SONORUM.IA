@@ -8,12 +8,12 @@ cap = cv2.VideoCapture(0)
 allowed_classes = None
 
 while True:
-    # ret, frame = cap.read()
-    # if not ret: 
-    #     print("Erro, nenhum vídeo identificado")
-    #     break
+    ret, frame = cap.read()
+    if not ret: 
+        print("Erro, nenhum vídeo identificado")
+        break
 
-    frame = cv2.imread("violao.jpg")
+    # frame = cv2.imread("violao.jpg")
 
     results = model(frame)
     data = collect(results)
@@ -29,11 +29,11 @@ while True:
         print("Aplicativo finalizado")
         break
     elif key == ord('1'):
-        allowed_classes = ['fret','nut']
+        allowed_classes = ['frets','frets_box','nut']
     elif key == ord('2'):
-        allowed_classes = ['fret']
+        allowed_classes = ['frets','frets_box']
     elif key == ord('3'):
-        allowed_classes = ['nut']
+        allowed_classes = ['frets','nut']
     elif key == ord('4'):
         allowed_classes = None
 

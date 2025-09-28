@@ -1,8 +1,11 @@
 def collect(results):
-    frets = []
-    nut = []
-    neck = []
+    frets = [] # trastes
+    nut = [] # pestana
+    neck = [] # braço
 
+    frets_box = []
+    neck_box = []
+    
     for r in results:
         boxes = r.boxes
         for box in boxes:
@@ -17,9 +20,11 @@ def collect(results):
 
             if label == 'fret':
                 frets.append((cx,cy,conf))
+                frets_box.append(((x1,y1),(x2,y2), conf))
             elif label == 'nut':
                 nut.append((cx,cy,conf))
             else:
                 neck.append((cx,cy,conf))
+                neck_box.append(((x1,y1),(x2,y2), conf))
     
-    return {'frets': frets, 'nut': nut, 'neck': neck}
+    return {'frets': frets, 'nut': nut, 'neck': neck, 'frets_box': frets_box, 'neck_box': neck_box}
