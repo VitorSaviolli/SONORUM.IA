@@ -1,5 +1,6 @@
 from ultralytics import YOLO
 from draw_boxes import draw
+from collect_data import collect
 import cv2
 
 model = YOLO("runs/detect/train/weights/best.pt")
@@ -7,13 +8,20 @@ cap = cv2.VideoCapture(0)
 allowed_classes = None
 
 while True:
-    ret, frame = cap.read()
-    if not ret: 
-        print("Erro, nenhum vídeo identificado")
-        break
+    # ret, frame = cap.read()
+    # if not ret: 
+    #     print("Erro, nenhum vídeo identificado")
+    #     break
+
+    frame = cv2.imread("violao.jpg")
 
     results = model(frame)
-    frame_draw = draw(results, frame, allowed_classes)  
+    data = collect(results)
+    print("Trastes (x,y,conf): ", data['frets'])
+    print("Pestana (x,y,conf): ", data['nut'])
+    print("Braço (x,y,conf): ", data['neck'])
+
+    frame_draw = draw(data, frame, allowed_classes)  
 
     cv2.imshow("Sonorum", frame_draw)
     key = cv2.waitKey(1) &  0xFF

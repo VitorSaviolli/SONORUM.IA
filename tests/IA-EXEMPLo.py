@@ -174,6 +174,7 @@ if __name__=="__main__":
     while True:
         ret,frame=cap.read()
         if not ret: break
+    
         results=model(frame)
         frame_drawn,prev_state=process_frame(frame,results,prev_state)
 
