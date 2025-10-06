@@ -3,7 +3,7 @@ from draw_boxes import draw
 from collect_data import collect
 import cv2
 
-model = YOLO("runs/detect/train/weights/best.pt")
+model = YOLO("runs/detect/train/weights/best.onnx")
 cap = cv2.VideoCapture(0)
 allowed_classes = None
 
