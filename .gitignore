@@ -1,0 +1,39 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# === Virtual environment ===
+.venv/
+venv/
+env/
+
+# === IDEs e editores ===
+.vscode/
+.idea/
+.history/
+
+# === Notebooks ===
+.ipynb_checkpoints/
+
+# === Logs e temporários ===
+*.log
+*.tmp
+*.swp
+.DS_Store
+
+# === Datasets e resultados ===
+data/
+outputs/
+models/
+checkpoints/
+
+# === Sistema ===
+Thumbs.db
