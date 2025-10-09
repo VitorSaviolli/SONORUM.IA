@@ -4,7 +4,7 @@ Este projeto processa áudio em tempo real para identificar acordes de violão. 
 
 ---
 
-## Estrutura do Projeto
+## Estrutura do Projeto (backend)
 
 - **`src/`**: Código-fonte.
   - `ui/`: Lógica da interface gráfica.
