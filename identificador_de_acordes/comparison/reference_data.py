@@ -44,7 +44,7 @@ def get_reference_data(chords_dir=CHORDS_DIR):
 
             try:
                 y, sr = librosa.load(file_path, sr=None)
-                
+
                 chroma_vector = extract_chroma(y, sr)
                 
                 reference_chords[chord_name] = [round(val, 4) for val in chroma_vector]

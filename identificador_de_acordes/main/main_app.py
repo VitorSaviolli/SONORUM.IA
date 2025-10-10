@@ -16,8 +16,9 @@ if __name__ == "__main__":
             
             if prominent_data:
                 print("--- Frequências e Intensidades Detectadas ---")
+                for item in prominent_data:
                 #teste do audio em tempo real
-                print(prominent_data)
+                    print(f"{item:.4f}", end = ' ')
             
     except KeyboardInterrupt:
         print("\nFinalizando o programa.")
