@@ -1,6 +1,6 @@
 import json
 import numpy as np
-from identificador_de_acordes.audio.audio_input import audio_stream_generator
+from identificador_de_acordes.audio.audio_input import sound_event_generator
 from identificador_de_acordes.audio.audio_processor import extract_chroma
 
 CHORDS_JSON = "./data/cache/chords.json"
@@ -18,20 +18,32 @@ def cosine_similarity(v1, v2):   # calcula a similaridade entre dois cromagramas
     return np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))
 
 def identify_chord(y, sr, reference_chords):
-    chroma_vector = extract_chroma(y, sr) # recebe o cromagrama da entrada de áudio
+    print("\n--- INICIANDO NOVA ANÁLISE ---")
+    chroma_vector = extract_chroma(y, sr)
     if chroma_vector is None:
         return None, 0.0
 
+    # Imprime o vetor do microfone para vermos como ele se parece
+    print(f"Vetor do Microfone: {[round(n, 3) for n in chroma_vector]}")
+    print("Comparando com a base de dados:")
+
     best_match = None
     best_similarity = -1
+    all_similarities = {} # Para guardar todos os resultados
 
     for chord_name, ref_vector in reference_chords.items():
         sim = cosine_similarity(chroma_vector, ref_vector)
+        all_similarities[chord_name] = sim # Guarda o resultado
         if sim > best_similarity:
             best_similarity = sim
             best_match = chord_name
 
-    if best_similarity >= SIMILARITY_THRESHOLD: # verifica se a similaridade é aceitável
+    # Imprime a pontuação de TODOS os acordes, do melhor para o pior
+    sorted_sims = sorted(all_similarities.items(), key=lambda item: item[1], reverse=True)
+    for chord, sim in sorted_sims:
+        print(f"  - {chord:<10}: {sim:.4f}")
+
+    if best_similarity >= SIMILARITY_THRESHOLD:
         return best_match, best_similarity
     else:
         return None, best_similarity
@@ -41,7 +53,7 @@ if __name__ == "__main__": # aqui carregamos o gabarito, comparamos com a entrad
     reference_chords = load_reference_chords()
 
     try:
-        for y, sr in audio_stream_generator():
+        for y, sr in sound_event_generator():
             chord, similarity = identify_chord(y, sr, reference_chords)
 
             if chord:

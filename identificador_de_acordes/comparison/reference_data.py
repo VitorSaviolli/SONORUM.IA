@@ -3,6 +3,7 @@ import json
 import numpy as np
 import librosa
 from identificador_de_acordes.audio.audio_processor import extract_chroma
+from identificador_de_acordes.audio.audio_input import RATE
 
 CHORDS_DIR = "./data/chords"     
 CHORDS_JSON = "./data/cache/chords.json"  
@@ -43,7 +44,7 @@ def get_reference_data(chords_dir=CHORDS_DIR):
             chord_name = os.path.splitext(filename)[0]  
 
             try:
-                y, sr = librosa.load(file_path, sr=None)
+                y, sr = librosa.load(file_path, sr=RATE)
 
                 chroma_vector = extract_chroma(y, sr)
                 
